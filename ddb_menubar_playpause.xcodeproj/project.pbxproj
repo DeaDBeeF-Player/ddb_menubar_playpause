@@ -6,8 +6,13 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2DB14F7224F120A30037A542 /* plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB14F7124F120A30037A542 /* plugin.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		2DB14F6A24F120800037A542 /* libddb_menubar_playpause.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libddb_menubar_playpause.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB14F6A24F120800037A542 /* ddb_menubar_playpause.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ddb_menubar_playpause.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB14F7124F120A30037A542 /* plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +29,7 @@
 		2DB14F6124F120800037A542 = {
 			isa = PBXGroup;
 			children = (
+				2DB14F7124F120A30037A542 /* plugin.m */,
 				2DB14F6B24F120800037A542 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -31,7 +37,7 @@
 		2DB14F6B24F120800037A542 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2DB14F6A24F120800037A542 /* libddb_menubar_playpause.dylib */,
+				2DB14F6A24F120800037A542 /* ddb_menubar_playpause.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,7 +69,7 @@
 			);
 			name = ddb_menubar_playpause;
 			productName = ddb_menubar_playpause;
-			productReference = 2DB14F6A24F120800037A542 /* libddb_menubar_playpause.dylib */;
+			productReference = 2DB14F6A24F120800037A542 /* ddb_menubar_playpause.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +108,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB14F7224F120A30037A542 /* plugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +232,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -237,7 +246,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
